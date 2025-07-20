@@ -1,85 +1,74 @@
 # 🐦 ChirpQL
 
-A bidirectional parser for Twitter's search syntax. Transform plain Twitter search queries into structured objects and vice versa with a beautiful, interactive web interface.
+**ChirpQL** is an **interactive playground** for exploring Twitter’s advanced search syntax. Paste in a Twitter-style search query and instantly see a structured JSON output — or build a JSON object and watch it convert into a valid Twitter search string in real-time.
+
+> 🔧 Powered by [`twitter-search-query-parser`](https://github.com/tweetdeck/twitter-search-query-parser), wrapped in a fast, modern UI.
+
+---
+
+## 🌐 Live Demo
+
+👉 [**Try it now**](https://chirpql.rijoanul-shanto.workers.dev)
+
+
+---
 
 ## ✨ Features
 
-- **🔄 Bidirectional Parsing**: Convert Twitter search queries to structured JSON and back to plain text
-- **🎨 Beautiful Interface**: Modern, responsive design with smooth animations and gradients
-- **📋 One-Click Copy**: Instantly copy results to clipboard
-- **💡 Smart Examples**: Pre-loaded examples to get you started quickly
-- **🔍 Real-time Processing**: Instant feedback as you type
-- **📱 Mobile Optimized**: Fully responsive design that works on all devices
-- **🛠️ Developer Friendly**: Perfect for building Twitter integrations and understanding search syntax
+* 🔄 **Live Query ↔ JSON Conversion**
+  Parse Twitter queries to structured JSON and generate queries from JSON objects.
 
-## 🎯 Use Cases
+* ⚡ **Instant Feedback**
+  Results update in real time as you type.
 
-- **API Development**: Build Twitter search integrations with structured query objects
-- **Learning Tool**: Understand Twitter's advanced search syntax
-- **Query Debugging**: Validate and troubleshoot complex search queries
-- **Documentation**: Generate examples for Twitter search API documentation
-- **Automation**: Convert user-friendly queries into API-ready formats
+* 💡 **Preloaded Examples**
+  Explore syntax instantly with built-in, ready-to-run queries.
 
-## 🛠️ Supported Twitter Search Features
+* 🎯 **Copy With One Click**
+  Copy output with ease — for docs, tests, or API calls.
 
-### Basic Operators
-- `from:username` - Tweets from a specific user
-- `to:username` - Tweets mentioning a specific user
-- `#hashtag` - Tweets containing hashtags
-- `@mention` - Tweets mentioning users
-- `"exact phrase"` - Exact phrase matching
+* 📱 **Responsive UI**
+  Built with Tailwind CSS, optimized for desktop and mobile.
 
-### Advanced Filters
-- `lang:en` - Language filtering (ISO 639-1 codes)
-- `since:2023-01-01` - Start date (YYYY-MM-DD)
-- `until:2024-01-01` - End date (YYYY-MM-DD)
-- `min_retweets:10` - Minimum retweets
-- `min_faves:5` - Minimum favorites/likes
-- `min_replies:2` - Minimum replies
+---
 
-### Boolean Logic & Modifiers
-- `OR` - Boolean OR operator
-- `-term` - Exclude terms (NOT operator)
-- `()` - Grouping operators for complex logic
-- `filter:verified` - Verified accounts only
-- `filter:media` - Tweets with media
+## 🎯 Who’s It For?
 
-## 🏃‍♂️ Quick Start
+* **Developers** building search features or integrations using [`twitter-search-query-parser`](https://github.com/tweetdeck/twitter-search-query-parser).
+* **Learners** experimenting with Twitter's search syntax.
+* **Power Users** validating or reverse-engineering complex queries.
+* **API Users** converting human-readable strings into structured formats.
 
-### Prerequisites
-- Node.js 18+
+---
 
-### Installation
+## 🔍 Supported Query Features
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/chirpql.git
-   cd chirpql
-   ```
+### ✅ Basic Operators
 
-2. **Install dependencies**
-   ```bash
-   yarn install
-   ```
+* `from:username` — tweets from a user
+* `to:username` — replies or mentions
+* `#hashtag`, `@mention`, `"exact phrase"`
 
-3. **Start the development server**
-   ```bash
-   yarn run dev
-   ```
+### ✅ Filters & Constraints
 
-4. **Open your browser**
-   Navigate to `http://localhost:5173`
+* `lang:en`, `since:YYYY-MM-DD`, `until:YYYY-MM-DD`
+* `min_retweets:10`, `min_faves:5`, `min_replies:2`
 
-## 📖 Usage Examples
+### ✅ Boolean Logic
 
-### Parse Query String → JSON Object
+* `OR`, `-term`, grouping with `()`
+* `filter:verified`, `filter:media`
 
-**Input:**
+---
+
+## 🧪 Try It Out
+
+### Example: Query String → JSON
+
 ```
 from:twitter #react OR #vue lang:en since:2023-01-01 -spam min_retweets:5
 ```
 
-**Output:**
 ```json
 {
   "text": [],
@@ -92,9 +81,8 @@ from:twitter #react OR #vue lang:en since:2023-01-01 -spam min_retweets:5
 }
 ```
 
-### Stringify JSON Object → Query String
+### Example: JSON → Query String
 
-**Input:**
 ```json
 {
   "text": ["javascript", "tutorial"],
@@ -106,31 +94,56 @@ from:twitter #react OR #vue lang:en since:2023-01-01 -spam min_retweets:5
 }
 ```
 
-**Output:**
 ```
 javascript tutorial #coding #webdev from:github lang:en min_faves:10 filter:verified
 ```
 
-## 🏗️ Built With
+---
 
-- **[React 18](https://reactjs.org/)** - Modern UI framework
-- **[TypeScript](https://www.typescriptlang.org/)** - Type-safe development
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first styling
-- **[Vite](https://vitejs.dev/)** - Lightning-fast build tool
-- **[Lucide React](https://lucide.dev/)** - Beautiful icons
-- **[twitter-search-query-parser](https://github.com/tweetdeck/twitter-search-query-parser)** - Core parsing engine
+## 🚀 Getting Started (Dev Setup)
 
-## 📁 Project Structure
+### Prerequisites
+
+* Node.js 18+
+* Yarn (or npm)
+
+### Installation
+
+```bash
+git clone https://github.com/yourusername/chirpQL.git
+cd chirpql
+yarn install
+yarn dev
+```
+
+Then visit: [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🧱 Built With
+
+* [React 18](https://reactjs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Vite](https://vitejs.dev/)
+* [Lucide Icons](https://lucide.dev/)
+* [twitter-search-query-parser](https://github.com/tweetdeck/twitter-search-query-parser) (core logic)
+
+---
+
+## 🗂️ Project Structure
 
 ```
 src/
-├── App.tsx          # Main application component with parsing logic
-├── main.tsx         # Application entry point
-├── index.css        # Global Tailwind CSS styles
-└── vite-env.d.ts    # Vite TypeScript definitions
+├── App.tsx          # Main UI logic & state
+├── main.tsx         # Entry point
+├── index.css        # Tailwind global styles
+└── vite-env.d.ts    # Type definitions
 ```
 
-## 🚀 Deployment
+---
+
+## 📦 Build & Deploy
 
 ### Build for Production
 
@@ -138,15 +151,10 @@ src/
 yarn build
 ```
 
-The built files will be in the `dist` directory, ready for deployment to any static hosting service.
+Output is in the `/dist` folder, ready for deployment (e.g., Netlify, Vercel, GitHub Pages).
 
-### Deploy to Netlify
-
-1. **Build the project**
-   ```bash
-   yarn build
-   ```
+---
 
 ## 🙏 Acknowledgments
 
-- **[TweetDeck Team](https://github.com/tweetdeck)** for the original [twitter-search-query-parser] library
+Huge thanks to the [TweetDeck team](https://github.com/tweetdeck) for creating [twitter-search-query-parser](https://github.com/tweetdeck/twitter-search-query-parser), the heart of this tool.
