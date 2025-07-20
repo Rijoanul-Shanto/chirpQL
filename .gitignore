@@ -23,4 +23,12 @@ dist-ssr
 *.sln
 *.sw?
 .env
-.yarn
+
+# yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.yarn/install-state.gz
