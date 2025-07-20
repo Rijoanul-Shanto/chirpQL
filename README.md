@@ -8,8 +8,7 @@
 
 ## 🌐 Live Demo
 
-👉 [**Try it now**](https://chirpql.rijoanul-shanto.workers.dev)
-
+👉 [**Try it now**](https://chirpql.pages.dev/)
 
 ---
 
