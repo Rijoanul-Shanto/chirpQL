@@ -5,7 +5,7 @@
 > 🔧 Powered by [`twitter-search-query-parser`](https://github.com/tweetdeck/twitter-search-query-parser), wrapped in a fast, modern UI.
 
 <p align="center">
-  <img width="700" height="400" alt="chirpql" src="https://github.com/user-attachments/assets/f913e387-065a-45b1-84fa-47c5eb281555" />
+  <img width="700" height="400" alt="chirpql" src="https://github.com/user-attachments/assets/edb9ac1e-ffd8-4317-83a9-b5e0a598f413" />
 </p>
 
 ## 🌐 Live Demo
